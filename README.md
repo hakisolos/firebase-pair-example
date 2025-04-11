@@ -5,10 +5,12 @@
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/IRON-M4N/pair-example.git
+   git clone https://github.com/hakisolos/firebase-pair-example.git
    cd pair-example
    ```
-##ALSO ADD UR FREBASE SERVCE ACCOUNT JSON DONT FORGET
+
+   ##ALSO ADD UR FREBASE SERVCE ACCOUNT JSON DONT FORGET
+
 2. **Install dependencies**
    ```bash
    npm install
