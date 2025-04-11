@@ -8,7 +8,7 @@
    git clone https://github.com/IRON-M4N/pair-example.git
    cd pair-example
    ```
-
+##ALSO ADD UR FREBASE SERVCE ACCOUNT JSON DONT FORGET
 2. **Install dependencies**
    ```bash
    npm install
