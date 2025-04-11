@@ -12,7 +12,7 @@ const {
 	makeCacheableSignalKeyStore,
 	DisconnectReason,
 } = require('@whiskeysockets/baileys');
-const { upload } = require('./firebase');
+const { upload } = require('./lib/firebase');
 const { Mutex } = require('async-mutex');
 const config = require('./config');
 const path = require('path');
