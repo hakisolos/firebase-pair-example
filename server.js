@@ -12,7 +12,7 @@ const {
 	makeCacheableSignalKeyStore,
 	DisconnectReason,
 } = require('@whiskeysockets/baileys');
-const { upload } = require('./firebase'); // Changed to firebase
+const { upload } = require('./firebase');
 const { Mutex } = require('async-mutex');
 const config = require('./config');
 const path = require('path');
@@ -71,14 +71,8 @@ async function initializeSession(Num, res) {
 			});
 			const pth = './session/creds.json';
 			try {
-				const url = await upload(pth);
-				let sID;
-				if (url.includes('https://firebase.google.com/')) {
-					// Updated to Firebase URL
-					sID = config.PREFIX + url.split('https://firebase.google.com/')[1];
-				} else {
-					sID = 'Fekd up';
-				}
+				const dbKey = await upload(pth);
+				const sID = config.PREFIX + dbKey;
 
 				await session.sendMessage(
 					session.user.id,
@@ -124,7 +118,6 @@ app.get('/pair', async (req, res) => {
 		return res.status(418).json({ message: 'Phone number is required' });
 	}
 
-	// Mutex to prevent race conditions
 	const release = await mutex.acquire();
 	try {
 		await initializeSession(Num, res);

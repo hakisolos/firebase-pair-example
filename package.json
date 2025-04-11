@@ -19,8 +19,11 @@
   },
   "homepage": "https://github.com/hakisolos/firebase-pair-example#readme",
   "dependencies": {
+    "@whiskeysockets/baileys": "^6.17.16",
+    "async-mutex": "^0.5.0",
     "express": "^5.1.0",
     "firebase-admin": "^13.2.0",
+    "node-cache": "^5.1.2",
     "pino": "^9.6.0"
   }
 }
